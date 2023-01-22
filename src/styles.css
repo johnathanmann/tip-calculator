@@ -1,0 +1,34 @@
+:root{
+  --gray: #2c2c2c;
+  --orange: #f48b30;
+  --dark-orange: #ff7b1d;
+  --white: #e4dfdc;
+  background-color: var(--gray);
+}
+
+@font-face {
+  font-family: Roboto-Mono;
+  src: url(./font/RobotoMono-Regular.ttf);
+}
+
+.app{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Roboto-Mono;
+}
+
+#calculator{
+  width: 60vw;
+  height: 50vh;
+  margin: auto;
+  display: inline-flex;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 10px 10px #b3aeab;
+}
+
+#column-1, #column-2{
+  display: block;
+}
