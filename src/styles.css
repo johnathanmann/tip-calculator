@@ -3,11 +3,12 @@
   --orange: #EB5530;
   --white: #e4dfdc;
   background-color: var(--gray);
+  overflow-x: hidden;
 }
 
 @font-face {
   font-family: Roboto-Mono;
-  src: url(./font/RobotoMono-Regular.ttf);
+  src: url(./assets/RobotoMono-Regular.ttf);
 }
 
 .app{
