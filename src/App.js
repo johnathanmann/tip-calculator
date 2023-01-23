@@ -6,23 +6,23 @@ function App() {
       <div id="calculator">
       <section id="column-1">
       <form>
-          <label for="fname">First name:</label><br/>
-          <input type="text" id="fname" name="fname"/>
+          <label htmlFor="bill"><h3 id="bill-label">Bill:</h3></label><br/>
+          <input type="text" id="bill" name="bill"/>
         </form>
         <div id='total'>
-          <h2>Tip Amount:</h2>
-          <h2>$ Tip</h2>
-          <h2>Bill Total:</h2>
-          <h2>$ Total</h2>
+          <p>Tip Amount:</p>
+          <p className='orange'>$ Tip</p>
+          <p>Bill Total:</p>
+          <p className='orange'>$ Total</p>
         </div>
         </section>
         <section id="column-2">
-          <button>Button</button>
-          <button>Button</button>
-          <button>Button</button>
-          <button>Button</button>
-          <button>Button</button>
-          <button>Button</button>
+          <button>5%</button>
+          <button>10%</button>
+          <button>20%</button>
+          <button>25%</button>
+          <button>50%</button>
+          <button>Custom</button>
         </section>
       </div>
     </div>
