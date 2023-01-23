@@ -5,14 +5,19 @@ function App() {
   const [tipValue, setTip] = useState();
   const [billValue, setBill] = useState();
   var tip = '';
-  var fullBill = '';
   const billRef = createRef(null);
   const findTip = (percentage) =>{
     var bill = billRef.current.value;
-    console.log({bill});
-    console.log({percentage});
     tip= ((percentage * bill));
-    console.log(tip);
+    setTip(tip);
+    setBill(parseInt(bill) + parseInt(tip));
+  }
+
+  const customRef = createRef(null);
+  const customTip = () =>{
+    var bill = billRef.current.value;
+    var percentage = customRef.current.value;
+    tip= ((percentage * bill));
     setTip(tip);
     setBill(parseInt(bill) + parseInt(tip));
   }
@@ -38,9 +43,9 @@ function App() {
           <button onClick={() => findTip(.2)}>20%</button>
           <button onClick={() => findTip(.25)}>25%</button>
           <button onClick={() => findTip(.5)}>50%</button>
-          <button onClick={() => findTip(5)}>Custom</button><br/>
-          <label htmlFor="bill"><h3 id="bill-label" className='inline'>Custom Tip%</h3></label>
-          <input type="text" className='inline' id="customTip" name="bill"/>
+          <button onClick={() => customTip()}>Custom</button><br/>
+          <label htmlFor="bill"><h3 id="bill-label" className='inline'>Custom Tip .?</h3></label>
+          <input type="text" className='inline' id="customTip" name="bill" ref={customRef}/>
         </section>
       </div>
     </div>
