@@ -29,7 +29,7 @@
   padding: 5px 5px 15px 5px;
 }
 
-input, input:active, input:hover{
+#bill{
   all: unset;
   outline: none;
   background-color: #eb553086;
@@ -80,6 +80,23 @@ button{
   border-radius: 10px;
 }
 
+.inline{
+  display: inline;
+}
+
+#customTip{
+  all: unset;
+  outline: none;
+  background-color: #eb553086;
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 5vw;
+  margin: 10px;
+}
+
 @media (max-width: 933px){
   #calculator{
     width: 60vw;
@@ -94,7 +111,7 @@ button{
   #calculator{
     width: 80vw;
   }
-  #total, input{
+  #total, #bill {
     width: 35vw;
   }
 }
