@@ -102,11 +102,21 @@ button{
   #calculator{
     width: 60vw;
   }
-
+  #total, #bill{
+    width: 25vw;
+  }
   button{
     padding-right: 30px;
   }
 }
+
+
+@media (max-width: 680px){
+  #total, #bill{
+    width: 20vw;
+  }
+}
+
 
 @media (max-width: 567px){
   #calculator{
@@ -115,11 +125,16 @@ button{
   #total, #bill {
     width: 35vw;
   }
+  button{
+    width: 7vw;
+    padding: auto 20px auto 5px;
+    margin: 5px;
+  }
 }
 
 @media(max-width: 485px){
   #total, #bill {
-    width: 25vw;
+    width: 30vw;
   }
   #calculator{
     width: 90vw;
