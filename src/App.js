@@ -1,16 +1,20 @@
 import React, { useState, useEffect, createRef } from "react";
 import './styles.css';
 
-
 function App() {
-
+  const [tipValue, setTip] = useState();
+  const [billValue, setBill] = useState();
+  var tip = '';
+  var fullBill = '';
   const billRef = createRef(null);
   const findTip = (percentage) =>{
     var bill = billRef.current.value;
-    console.log({bill})
-    console.log({percentage})
-    var tip= ((percentage * bill));
-    console.log(tip)
+    console.log({bill});
+    console.log({percentage});
+    tip= ((percentage * bill));
+    console.log(tip);
+    setTip(tip);
+    setBill(parseInt(bill) + parseInt(tip));
   }
   
   return (
@@ -19,13 +23,13 @@ function App() {
       <section id="column-1">
       <form>
           <label htmlFor="bill"><h3 id="bill-label">Bill:</h3></label><br/>
-          <input type="text" id="bill" name="bill" ref={billRef}/>
+          <input type="number" id="bill" name="bill" ref={billRef}/>
         </form>
         <div id='total'>
           <p>Tip Amount:</p>
-          <p className='orange'>$ Tip</p>
+          <p className='orange'>$ {tipValue}</p>
           <p>Bill Total:</p>
-          <p className='orange'>$ Total</p>
+          <p className='orange'>$ {billValue}</p>
         </div>
         </section>
         <section id="column-2">
