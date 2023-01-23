@@ -1,19 +1,18 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, createRef } from "react";
 import './styles.css';
 
-function App() {
-  const billRef = useRef(null);
 
-  const [bill, setBill] = useState('');
+function App() {
+
+  const billRef = createRef(null);
   const findTip = (percentage) =>{
-    setBill(billRef.current.value);
+    var bill = billRef.current.value;
     console.log({bill})
     console.log({percentage})
-    var tip= ((percentage / bill) * 100);
+    var tip= ((percentage * bill));
     console.log(tip)
   }
   
-
   return (
     <div className="app">
       <div id="calculator">
