@@ -44,8 +44,8 @@ function App() {
           <button onClick={() => findTip(.25)}>25%</button>
           <button onClick={() => findTip(.5)}>50%</button>
           <button onClick={() => customTip()}>Custom</button><br/>
-          <label htmlFor="bill"><h3 id="bill-label" className='inline'>Custom Tip .?</h3></label>
-          <input type="text" className='inline' id="customTip" name="bill" ref={customRef}/>
+          <label htmlFor="bill"><h3 id="bill-label" className='display'>Custom Tip .?</h3></label>
+          <input type="text" className='display' id="customTip" name="bill" ref={customRef}/>
         </section>
       </div>
     </div>
